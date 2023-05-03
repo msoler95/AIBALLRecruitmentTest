@@ -1,0 +1,7 @@
+{
+  "name": "AirballRecruitmentTest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
