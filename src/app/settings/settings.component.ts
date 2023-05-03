@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { EventEmitter } from 'stream';
 
 @Component({
@@ -8,10 +8,15 @@ import { EventEmitter } from 'stream';
 })
 export class SettingsComponent  implements OnInit {
 
-  constructor(    private renderer: Renderer2,) { }
+  constructor(    private renderer: Renderer2, private el: ElementRef) { }
+  isDarkMode = false;
+  ngOnInit() {
+    this.isDarkMode = this.triggerPosition()
+  }
 
-  ngOnInit() {}
-
+  triggerPosition() {
+   return document.body.getAttribute('color-theme') === 'dark' ;
+  }
   async changeToDarkTheme(event: any) {
     if (event.detail.checked) {
       /* document.body.setAttribute("color-theme", "dark"); */
