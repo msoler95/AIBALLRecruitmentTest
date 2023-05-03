@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { StatisticsService } from 'src/app/services/statistics.service';
 
@@ -12,6 +12,7 @@ export class GameComponent  implements OnInit {
 
   constructor(
     private route: ActivatedRoute, 
+    private router: Router,
     private statisticsService: StatisticsService,
     private toastController: ToastController) { }
   gameId: string | null = null;
@@ -36,7 +37,7 @@ export class GameComponent  implements OnInit {
       await toast.present();
 
     }
-    else console.log('team found')
+    else this.router.navigate(['statistics', this.gameId, 'team', teamNumber])
   }
 
   async goToPlayer(playerNumber: number) {
@@ -50,7 +51,7 @@ export class GameComponent  implements OnInit {
       await toast.present();
 
     }
-    else console.log('player found')
+    else this.router.navigate(['statistics', this.gameId, 'player', playerNumber])
   }
 
 }
