@@ -35,4 +35,73 @@
       </ion-row>
     </ion-grid>
   </ion-chip>
+
+  <!--Team 1-->
+  <ion-list style="margin-top: 10px">
+    <ion-item button (click)="goToTeam(1)">
+      <ion-label> Team 1 </ion-label>
+    </ion-item>
+    <ion-item
+      button
+      style="margin-left: 20px; margin-top: 5px"
+      lines="none"
+      (click)="goToPlayer(1)"
+    >
+      <ion-avatar slot="start">
+        <img
+          alt="Silhouette of a person's head"
+          src="https://ionicframework.com/docs/img/demos/avatar.svg"
+        />
+      </ion-avatar>
+      <ion-label> Player 1 </ion-label>
+    </ion-item>
+    <ion-item
+      button
+      style="margin-left: 20px; margin-top: 5px"
+      lines="none"
+      (click)="goToPlayer(2)"
+    >
+      <ion-avatar slot="start">
+        <img
+          alt="Silhouette of a person's head"
+          src="https://ionicframework.com/docs/img/demos/avatar.svg"
+        />
+      </ion-avatar>
+      <ion-label> Player 2 </ion-label>
+    </ion-item>
+  </ion-list>
+  <!--Team 2-->
+  <ion-list style="margin-top: 10px">
+    <ion-item button (click)="goToTeam(2)">
+      <ion-label> Team 2 </ion-label>
+    </ion-item>
+    <ion-item
+      button
+      style="margin-left: 20px; margin-top: 5px"
+      lines="none"
+      (click)="goToPlayer(3)"
+    >
+      <ion-avatar slot="start">
+        <img
+          alt="Silhouette of a person's head"
+          src="https://ionicframework.com/docs/img/demos/avatar.svg"
+        />
+      </ion-avatar>
+      <ion-label> Player 3 </ion-label>
+    </ion-item>
+    <ion-item
+      button
+      style="margin-left: 20px; margin-top: 5px"
+      lines="none"
+      (click)="goToPlayer(4)"
+    >
+      <ion-avatar slot="start">
+        <img
+          alt="Silhouette of a person's head"
+          src="https://ionicframework.com/docs/img/demos/avatar.svg"
+        />
+      </ion-avatar>
+      <ion-label> Player 4 </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
