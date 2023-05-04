@@ -8,17 +8,21 @@
 </ion-header>
 <ion-content>
   <div *ngIf="statistics">
-    <div *ngFor="let statistic of this.statistics.statistics">
+    <div *ngFor="let statistic of this.statistics.statistics; index as i">
       <ion-grid>
         <ion-row>
           <ion-col>
-            <h2>{{ statistic.inside_title }}</h2>
             <p>{{ statistic.titol }}</p>
-            <app-progress-bar
+            <!--<app-progress-bar
               [value]="statistic.stat.value"
               [name]="statistic.stat.name"
               [color]="statistic.stat.color"
-            ></app-progress-bar>
+            ></app-progress-bar>-->
+            <app-pie-chart
+              [name]="'MyChart' + i"
+              [stats]="statistic.stat"
+              [chartName]="statistic.inside_title"
+            ></app-pie-chart>
           </ion-col>
         </ion-row>
       </ion-grid>
