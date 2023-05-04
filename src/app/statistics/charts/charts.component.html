@@ -12,13 +12,15 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <p>{{ statistic.titol }}</p>
-            <!--<app-progress-bar
+            <h2>{{ statistic.titol }}</h2>
+            <app-progress-bar
+              *ngIf="statistic.type === 'progressbar'"
               [value]="statistic.stat.value"
               [name]="statistic.stat.name"
               [color]="statistic.stat.color"
-            ></app-progress-bar>-->
+            ></app-progress-bar>
             <app-pie-chart
+              *ngIf="statistic.type === 'piechart'"
               [name]="'MyChart' + i"
               [stats]="statistic.stat"
               [chartName]="statistic.inside_title"
