@@ -7,6 +7,7 @@ import { Component, Renderer2 } from '@angular/core';
 export class AppComponent {
   public appPages = [
     { title: 'Statistics', url: '/statistics', icon: 'stats-chart' },
+    { title: 'Change JSON', url: '/json', icon: 'document' },
     { title: 'Settings', url: '/settings', icon: 'settings' }
   ];
   public labels = []

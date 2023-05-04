@@ -16,6 +16,14 @@ export class StatisticsService {
     return of(this.dummy.find(d => d.code === code ))
   }
 
+  getDummy () {
+    return JSON.stringify(this.dummy, null, 4)
+  }
+
+  setDummy(newDummy: string) {
+    this.dummy = JSON.parse(newDummy)
+  }
+
   dummy = [{
     "code": "089d08f1-957e-4f96-974e-5c032773aa01",
     "date": "2023-03-28 09:00:00+00:00",

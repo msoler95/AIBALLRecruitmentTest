@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsModule)
+  },
+  {
+    path: 'json',
+    loadChildren: () => import('./change-json/change-json.module').then( m => m.ChangeJSONModule)
   }
 ];
 

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Change JSON</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="saveJSON()"> Save </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-textarea style="height: 3000px" [(ngModel)]="json"></ion-textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
